@@ -1,0 +1,274 @@
+/* Font Families */
+ :root {
+    --primaryGreen: #13C56B;
+    --lightBG:#51d69457;
+    --darkHover: #10a75b;
+    --accentBlue: #6691E7;
+    --black:#212529;
+}
+
+.primaryGreenText{
+    color: var(--primaryGreen);
+}
+.black{
+  color: var(--black);
+}
+.blackBG{
+  background-color: var(--black);
+}
+
+body {
+    color: var(--black);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    font-size: 13.2px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+
+.secH {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  font-size: 24px; 
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.thirdH {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  font-size: 20px; 
+  margin: 0 0 12px;
+}
+
+.fourthH {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  font-size: 18px; 
+}
+
+.subHeading{
+  font-weight: 600;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.navbar .containerCustom{
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+.containerCustom{
+  padding: 0 12px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+
+.navbar-brand{
+  width: 126px;
+  padding: 0;
+}
+
+header{
+  height: 65.7px;
+}
+
+.bg-light {
+    background-color: var(--primaryGreen) !important;
+}
+
+.navbar-toggler {
+    background-color: #9ef7a581;
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar-nav {
+  row-gap: 12px;
+}
+
+.offcanvas.offcanvas-end {
+  width: 300px;
+  background-color: #ffffff;
+}
+.offViewLink{
+  background: var(--primaryGreen);
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+.offViewLink:hover,.offViewLink.active{
+  background: var(--darkHover);
+  color: #ffffff;
+}
+
+.defaultPadding{
+  padding: 30px 0;
+}
+
+.banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightBG);
+}
+
+.bannerImage{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconGroup{
+  padding: 4px;
+  background-color: var(--lightBG);
+  color: #ffffff;
+  font-size: 18px;
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.btn-label{
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  padding-left: 48px;
+  min-height: 40px;
+  position: relative;
+  background-color: var(--primaryGreen);
+}
+
+.btn-label:hover{
+  background-color: var(--darkHover);
+  color: #ffffff
+} 
+
+.modal-header{
+  background-color: var(--lightBG);
+  padding: 8px 12px;
+}
+
+.btn-close:focus {
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(25, 104, 60, 0.25);
+    opacity: 1;
+}
+
+/* Optional: Custom styling for the modal form */
+#connectFormModal .form-control {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.9375rem;
+  color: #6c757d;
+}
+
+#connectFormModal .form-control:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+#connectFormModal .form-control::placeholder {
+  color: #adb5bd;
+}
+
+#connectFormModal .form-label {
+  margin-bottom: 0.375rem;
+  color: #212529;
+}
+
+#connectFormModal .btn-success {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+#connectFormModal .btn-success:hover {
+  background-color: #059669;
+  border-color: #059669;
+}
+
+#connectFormModal .modal-header {
+  background-color: #d1f4e5;
+}
+
+#connectFormModal .text-primary {
+  color: #0d6efd !important;
+}
+
+
+/* Share Modal Custom Styling */
+#shareModal .modal-header {
+  background-color: #d1f4e5;
+}
+
+#shareModal .modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* QR Code Container Styling */
+.qr-code-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#qrCodeDisplay {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#qrCodeDisplay canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+ 
+
+/* Toast notification styling */
+.toast-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #10b981;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    bottom: -50px;
+    opacity: 0;
+  }
+  to {
+    bottom: 20px;
+    opacity: 1;
+  }
+}
+
+
