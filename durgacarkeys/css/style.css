@@ -16,12 +16,23 @@
 .blackBG{
   background-color: var(--black);
 }
+.primaryBG{
+  background-color: var(--primaryGreen);
+}
 
 body {
     color: var(--black);
     font-family: 'Inter', sans-serif;
     margin: 0;
     font-size: 13.2px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+main{
+  flex: 1 0 auto;
 }
 
 * {
@@ -260,6 +271,48 @@ header{
   animation: slideUp 0.3s ease;
 }
 
+.contactInfo a{
+  font-size: 13px;
+  transition: color 0.3s ease-in-out;
+}
+
+.contactInfo a:hover{
+  color: var(--darkHover);
+}
+
+.card-border-success{
+  border: 1px solid var(--primaryGreen) !important;
+}
+
+.footer{
+  margin-top: 30px;
+}
+
+.footer .containerCustom{
+  border-top: 2px solid var(--lightBG);
+  padding: 20px 12px;
+}
+
+.footer a{
+  color: var(--primaryGreen);
+  transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover{
+  color: var(--darkHover);
+}
+
+
+.mainTitle .containerCustom{
+  padding: 20px 12px;
+  border-bottom: 2px solid var(--lightBG);
+}
+.borderAndRadius{
+  border: 1px solid var(--darkHover);
+  border-radius: 8px;
+  padding: 12px;
+}
+
 @keyframes slideUp {
   from {
     bottom: -50px;
@@ -272,3 +325,25 @@ header{
 }
 
 
+
+@media (max-width: 1199.98px) {
+
+}
+@media (max-width: 991.98px) {
+
+}
+@media (max-width: 767.98px) {
+  .defaultPadding {
+    padding: 20px 0;
+  }
+
+
+}
+@media (max-width: 575.98px) {
+  .offcanvas.offcanvas-end {
+    width: 220px;
+  }
+}
+@media only screen and (max-height: 539.98px) and (max-width: 1024px) {
+
+}
