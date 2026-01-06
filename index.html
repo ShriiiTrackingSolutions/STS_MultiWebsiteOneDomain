@@ -1,561 +1,1169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Durga Car Keys</title>
- <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="image/Fevicon.webp" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Affordable website hosting solutions with subfolder architecture. Get your business online with minimal cost - no domain purchase needed!">
+  <meta name="keywords" content="affordable website, low cost hosting, subfolder hosting, business website, online presence">
+  <title>shriiitrackingsolution - Affordable Website Solutions</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Iconify -->
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --brand-primary: #5610a5;
+      --brand-secondary: #7c3aed;
+      --brand-light: #f3e8ff;
+      --brand-gradient: linear-gradient(135deg, #5610a5 0%, #7c3aed 100%);
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --bg-light: #f8fafc;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* Navbar */
+    .navbar {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      padding: 1rem 0;
+    }
+    
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--brand-primary) !important;
+      letter-spacing: -0.5px;
+    }
+    
+    .nav-link {
+      color: var(--text-dark);
+      font-weight: 500;
+      margin: 0 0.5rem;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      color: var(--brand-primary);
+    }
+    
+    .btn-primary-custom {
+      background: var(--brand-gradient);
+      border: none;
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(86, 16, 165, 0.3);
+    }
+    
+    .btn-primary-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(86, 16, 165, 0.4);
+      color: #ffffff;
+    }
+     .btn-primary-custom.btn:active{   
+        color: #ffffff;
+     }
+    
+    .btn-outline-custom {
+      border: 2px solid var(--brand-primary);
+      color: var(--brand-primary);
+      padding: 0.75rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      background: transparent;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-outline-custom:hover {
+      background: var(--brand-primary);
+      color: white;
+      transform: translateY(-2px);
+    }
 
-<!-- Primary Meta Tags -->
-<!-- <meta name="description" content="Experience the gentle power of nature with Mahi Organics 100% Natural Loofah Scrub. Biodegradable, chemical-free, and sustainably grown for radiant skin.">
-<meta name="keywords" content="organic loofah, natural body scrub, plastic free shower, biodegradable sponge, Mahi Organics, sustainable skincare, vegan bath products">
-<meta name="author" content="Mahi Organics">
-
-
-<meta property="og:type" content="product">
-<meta property="og:url" content="https://www.mahiorganics.com/">
-<meta property="og:title" content="Mahi Organics | 100% Natural Loofah Scrub">
-<meta property="og:description" content="Grown, not manufactured. Switch to the 100% biodegradable loofah that naturally exfoliates and protects our oceans.">
-<meta property="og:image" content="https://www.mahiorganics.com/assets/social-share-image.jpg">
-
-
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://www.mahiorganics.com/">
-<meta property="twitter:title" content="Mahi Organics | 100% Natural Loofah Scrub">
-<meta property="twitter:description" content="Grown, not manufactured. Switch to the 100% biodegradable loofah that naturally exfoliates and protects our oceans.">
-<meta property="twitter:image" content="https://www.mahiorganics.com/assets/social-share-image.jpg"> -->
-
-<link fetchpriority="high" rel="preload" href="image/BrandLogo.webp" as="image" type="image/webp" />
-<!-- Preload -->
-<link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
-<link rel="preload" as="style" href="css/style.css" />
-
-<link rel="stylesheet" href="css/style.css" />
-<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    .hero-section .btn-outline-custom:hover{
+      border: 2px solid var(--brand-primary);
+      background: var(--brand-secondary);
+    }
+    .hero-section .btn-outline-custom{
+      border: 2px solid #ffffff;
+      color: #ffffff;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+      background: var(--brand-gradient);
+      color: white;
+      padding: 100px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.4;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero-section h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    
+    .hero-section .lead {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+      max-width: 600px;
+    }
+    
+    .hero-stats {
+      display: flex;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+    
+    .stat-item h3 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    
+    .stat-item p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+    
+    /* Features Section */
+    .features-section {
+      padding: 80px 0;
+      background: white;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .section-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+      margin-bottom: 1rem;
+    }
+    
+    .section-title p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .feature-card {
+      background: white;
+      border: 2px solid var(--brand-light);
+      border-radius: 16px;
+      padding: 2rem;
+      height: 100%;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--brand-gradient);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(86, 16, 165, 0.15);
+      border-color: var(--brand-primary);
+    }
+    
+    .feature-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .feature-icon {
+      width: 70px;
+      height: 70px;
+      background: var(--brand-gradient);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      color: white;
+    }
+    
+    .feature-card h4 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--brand-primary);
+    }
+    
+    .feature-card p {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin: 0;
+    }
+    
+    /* How It Works Section */
+    .how-it-works {
+      padding: 80px 0;
+      background: var(--bg-light);
+    }
+    
+    .step-card {
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+    
+    .step-number {
+      width: 60px;
+      height: 60px;
+      background: var(--brand-gradient);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 4px 15px rgba(86, 16, 165, 0.3);
+    }
+    
+    .step-card h4 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--brand-primary);
+    }
+    
+    .step-card p {
+      color: var(--text-muted);
+      margin: 0;
+    }
+    
+    /* Pricing Section */
+    .pricing-section {
+      padding: 80px 0;
+      background: white;
+    }
+    
+    .pricing-card {
+      background: white;
+      border: 2px solid var(--brand-light);
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .pricing-card.featured {
+      background: var(--brand-gradient);
+      color: white;
+      transform: scale(1.05);
+      border: none;
+      box-shadow: 0 15px 40px rgba(86, 16, 165, 0.3);
+    }
+    
+    .pricing-card:hover:not(.featured) {
+      border-color: var(--brand-primary);
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(86, 16, 165, 0.2);
+    }
+    
+    .pricing-badge {
+      display: inline-block;
+      background: var(--brand-light);
+      color: var(--brand-primary);
+      padding: 0.5rem 1.5rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    
+    .pricing-card.featured .pricing-badge {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+    
+    .pricing-card h3 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .pricing-card .price {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    
+    .pricing-card .price span {
+      font-size: 1.25rem;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+    
+    .pricing-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+      text-align: left;
+    }
+    
+    .pricing-card ul li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--brand-light);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .pricing-card.featured ul li {
+      border-bottom-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .pricing-card ul li:last-child {
+      border-bottom: none;
+    }
+    
+    .pricing-card ul li .iconify {
+      color: var(--brand-primary);
+      font-size: 1.25rem;
+    }
+    
+    .pricing-card.featured ul li .iconify {
+      color: white;
+    }
+    
+    /* Clients Section */
+    .clients-section {
+      padding: 80px 0;
+      background: var(--bg-light);
+    }
+    
+    .client-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .client-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(86, 16, 165, 0.15);
+    }
+    
+    .client-logo {
+      display: inline-block;
+      background: var(--brand-gradient);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    
+    .client-url {
+      color: var(--brand-primary);
+      font-size: 0.9rem;
+      word-break: break-all;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    
+    .client-category {
+      display: inline-block;
+      background: var(--brand-light);
+      color: var(--brand-primary);
+      padding: 0.25rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      padding: 80px 0;
+      background: var(--brand-gradient);
+      color: white;
+      text-align: center;
+    }
+    
+    .cta-section h2 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+    }
+    
+    .cta-section p {
+      font-size: 1.25rem;
+      margin-bottom: 2.5rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .btn-white-custom {
+      background: white;
+      color: var(--brand-primary);
+      padding: 1rem 3rem;
+      border-radius: 8px;
+      font-weight: 700;
+      border: none;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .btn-white-custom:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      background-color: var(--brand-secondary);
+    }
+    
+    /* Footer */
+    .footer {
+      background: #1e293b;
+      color: white;
+      padding: 3rem 0 1.5rem;
+    }
+    
+    .footer-brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--brand-secondary);
+      margin-bottom: 1rem;
+    }
+    
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      
+      .section-title h2 {
+        font-size: 2rem;
+      }
+      
+      .cta-section h2 {
+        font-size: 2rem;
+      }
+      
+      .pricing-card.featured {
+        transform: scale(1);
+        margin-bottom: 2rem;
+      }
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-on-scroll {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <nav class="navbar bg-light fixed-top">
-  <div class="containerCustom">
-    <a class="navbar-brand" href="index.html"><img loading="eager" src="image/BrandLogo.webp" alt="Mahi Oraganics"></a>
-    <button class="navbar-toggler" type="button" aria-label="navbar toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">shriiitrackingsolution</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#how-it-works">How It Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#clients">Our Clients</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a href="#contact" class="btn btn-primary-custom">Get Started</a>
+          </li>
+        </ul>
       </div>
-      <div class="offcanvas-body">
-        <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy">
-          <a class="py-2 px-3 offViewLink rounded" href="durgacarkeys/index.html">Home</a>
-          <a class="py-2 px-3 offViewLink rounded" href="durgacarkeys/info.html">Info</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7 hero-content">
+          <h1>Get Your Business Online Without Breaking the Bank</h1>
+          <p class="lead">Professional websites with subfolder hosting - No domain purchase needed! Share your brand with the world at minimal cost.</p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#pricing" class="btn btn-white-custom">View Pricing</a>
+            <a href="#how-it-works" class="btn btn-outline-custom">Learn More</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3>₹999</h3>
+              <p>Starting Price</p>
+            </div>
+            <div class="stat-item">
+              <h3>50+</h3>
+              <p>Happy Clients</p>
+            </div>
+            <div class="stat-item">
+              <h3>24/7</h3>
+              <p>Support</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center d-none d-lg-block">
+          <span class="iconify" data-icon="fluent:globe-desktop-24-filled" style="font-size: 20rem; opacity: 0.15;"></span>
         </div>
       </div>
     </div>
-  </div>
-</nav>
-</header>
+  </section>
 
-<main>
-<section class="banner">
-  <div class="containerCustom">
-    <div class="bannerImage display-1"> Banner</div>
-  </div>
-</section>
-
-<section class="introAbout defaultPadding">
-  <div class="containerCustom text-center">
-   <h2 class="secH primaryGreenText mb-1">Bharat Rajout</h2>
-   <h3 class="text-muted thirdH mb-1">Founder & CEO</h3>
-   <span class="subHeading primaryGreenText mb-3">AT DURGA CAR KEY</span>
-   <p class="text-muted mb-0">We provide fast, professional car key and unlocking services across make/models. Whether you’re locked out, have a worn or damaged key, need a flip key, or lost your only key — our certified technicia</p>
-  </div>
-</section>
-
-<section class="linkBiscuits">
- <div class="containerCustom">
-<div class="hstack gap-1"> 
-  <!-- Call Button -->
-  <a href="tel:09724568681" target="_blank" class="btn w-100  btn-label">
-    <div class="iconGroup">
-      <span class="iconify" data-icon="humbleicons:phone" data-inline="false"></span>
-    </div>
-    Call
-  </a> 
-  <a href="mailto:brajput58@gmail.com" target="_blank" class="btn w-100  btn-label">
-    <div class="iconGroup">
-      <span class="iconify" data-icon="octicon:mail-16" data-inline="false"></span>
-    </div>
-    Call
-  </a> 
-  <a href="https://wa.me/09724568681" target="_blank" class="btn w-100  btn-label">
-    <div class="iconGroup">
-      <span class="iconify" data-icon="nimbus:whatsapp" data-inline="false"></span>
-    </div>
-    Call
-  </a> 
-
-</div>
- </div>
-</section>
-
-<section class="linkBiscuits">
- <div class="containerCustom">
-<div class="hstack gap-1 mt-3"> 
-  <!-- Call Button -->
-
-  <a href="image/Bharat_Rajout.vcf" target="_blank" class="btn w-100  btn-label" download>
-    <div class="iconGroup">
-      <span class="iconify" data-icon="bxs:contact" data-inline="false"></span>
-    </div>
-    Save
-  </a> 
-  <a href="javascript:void(0)" class="btn w-100  btn-label" type="button" data-bs-toggle="modal" data-bs-target="#connectFormModal">
-    <div class="iconGroup">
-      <span class="iconify" data-icon="tabler:plug-connected" data-inline="false"></span>
-    </div>
-    Connect
-  </a> 
-  <a href="javascript:void(0)" class="btn w-100  btn-label" type="button" data-bs-toggle="modal" data-bs-target="#shareModal">
-    <div class="iconGroup">
-      <span class="iconify" data-icon="tdesign:share-filled" data-inline="false"></span>
-    </div>
-    Share
-  </a> 
-
-</div>
- </div>
-</section>
-
-<!-- Modal -->
-<div class="modal fade" id="connectFormModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="connectFormModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header border-0">
-        <h1 class="modal-title fs-5 fw-semibold" id="connectFormModalLabel">Connect / Inquiry:</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Choose Subfolder Hosting?</h2>
+        <p>Cost-effective, professional, and easy to manage - everything you need to establish your online presence</p>
       </div>
-      <div class="modal-body px-4">
-        <form id="connectInquiryForm" class="needs-validation" novalidate>
-          <!-- Name Field -->
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <span class="iconify" data-icon="tabler:currency-rupee"></span>
+            </div>
+            <h4>No Domain Costs</h4>
+            <p>Eliminate expensive domain registration and renewal fees. Your website lives as a subfolder under our main domain, dramatically reducing your costs.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <span class="iconify" data-icon="fluent:server-16-filled"></span>
+            </div>
+            <h4>Shared Infrastructure</h4>
+            <p>All client websites share one optimized server infrastructure, keeping hosting costs minimal while maintaining excellent performance.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <span class="iconify" data-icon="fluent:share-24-filled"></span>
+            </div>
+            <h4>Easy Sharing</h4>
+            <p>Get a clean, professional URL like yourdomain.com/yourBusiness that's easy to share on social media, business cards, and marketing materials.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <span class="iconify" data-icon="fluent:flash-24-filled"></span>
+            </div>
+            <h4>Fast Setup</h4>
+            <p>Get your website live in days, not weeks. No complex domain configuration or DNS settings to worry about - we handle everything.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <span class="iconify" data-icon="fluent:phone-24-filled"></span>
+            </div>
+            <h4>Mobile Optimized</h4>
+            <p>Every website we build is fully responsive and mobile-friendly, ensuring your customers have a great experience on any device.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <span class="iconify" data-icon="fluent:shield-checkmark-24-filled"></span>
+            </div>
+            <h4>Secure & Reliable</h4>
+            <p>SSL certificates, regular backups, and 99.9% uptime guarantee. Your website stays secure and accessible at all times.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <div class="section-title">
+        <h2>How It Works</h2>
+        <p>Getting your business online is simple with our streamlined process</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h4>Share Your Details</h4>
+            <p>Tell us about your business, services, and what you want to showcase. Share your content, images, and branding materials.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h4>We Build Your Site</h4>
+            <p>Our team creates a professional, mobile-optimized website in your dedicated subfolder with all your pages and content.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h4>Go Live & Share</h4>
+            <p>Your website goes live with a clean URL. Start sharing it with customers and establish your online brand presence!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Simple, Affordable Pricing</h2>
+        <p>Choose the plan that fits your business needs - all with no hidden costs</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card">
+            <span class="pricing-badge">STARTER</span>
+            <h3>Basic</h3>
+            <div class="price">₹999<span>/year</span></div>
+            <ul>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                Single Page Website
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                Mobile Responsive
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                Clean Subfolder URL
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                SSL Certificate
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                Basic Contact Form
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                Email Support
+              </li>
+            </ul>
+            <button class="btn btn-outline-custom w-100" data-bs-toggle="modal" data-bs-target="#contactModal">Get Started</button>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card featured">
+            <span class="pricing-badge">MOST POPULAR</span>
+            <h3>Professional</h3>
+            <div class="price">₹2,499<span>/year</span></div>
+            <ul>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                Up to 5 Pages
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                Mobile Responsive
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                Custom Subfolder URL
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                SSL Certificate
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                Advanced Contact Forms
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                WhatsApp Integration
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                Image Gallery
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                Priority Support
+              </li>
+            </ul>
+            <button class="btn btn-white-custom w-100" data-bs-toggle="modal" data-bs-target="#contactModal">Get Started</button>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card">
+            <span class="pricing-badge">ENTERPRISE</span>
+            <h3>Business</h3>
+            <div class="price">₹4,999<span>/year</span></div>
+            <ul>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                Unlimited Pages
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                Mobile Responsive
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                Custom Subfolder URL
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                SSL Certificate
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                Advanced Features
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                WhatsApp Integration
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                24/7 Priority Support
+              </li>
+              <li>
+                <span class="iconify" data-icon="fluent:checkmark-circle-24-filled"></span>
+                Monthly Updates
+              </li>
+            </ul>
+            <button class="btn btn-outline-custom w-100" data-bs-toggle="modal" data-bs-target="#contactModal">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients Section -->
+  <section id="clients" class="clients-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Live Client Websites</h2>
+        <p>See how businesses are establishing their online presence with our solution</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="client-card">
+            <div class="client-logo">AutoRentals</div>
+            <a href="durgacarkeys/index.html" class="client-url">durgacarkeys</a>
+            <span class="client-category">Car Rental</span>
+            <p class="mt-3 text-muted">Complete car rental website with booking system and vehicle showcase</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="client-card">
+            <div class="client-logo">PestPro</div>
+            <a href="#" class="client-url">yourdomain.com/pestControlServices</a>
+            <span class="client-category">Pest Control</span>
+            <p class="mt-3 text-muted">Service-based website with contact forms and service area information</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="client-card">
+            <div class="client-logo">EventMasters</div>
+            <a href="#" class="client-url">yourdomain.com/eventPlanning</a>
+            <span class="client-category">Event Planning</span>
+            <p class="mt-3 text-muted">Portfolio website showcasing past events and booking capabilities</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="client-card">
+            <div class="client-logo">OrganicFresh</div>
+            <a href="#" class="client-url">yourdomain.com/organicProducts</a>
+            <span class="client-category">Organic Products</span>
+            <p class="mt-3 text-muted">Product showcase with contact and ordering information</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="client-card">
+            <div class="client-logo">DJ Vibes</div>
+            <a href="#" class="client-url">yourdomain.com/djServices</a>
+            <span class="client-category">DJ Services</span>
+            <p class="mt-3 text-muted">Entertainment service website with media gallery and booking form</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="client-card">
+            <div class="client-logo">HealthPlus</div>
+            <a href="#" class="client-url">yourdomain.com/medicalServices</a>
+            <span class="client-category">Healthcare</span>
+            <p class="mt-3 text-muted">Medical practice website with appointment booking system</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="contact" class="cta-section">
+    <div class="container">
+      <h2>Ready to Establish Your Online Presence?</h2>
+      <p>Join 50+ businesses who chose affordable, professional websites without the burden of domain and hosting costs</p>
+      <button class="btn btn-white-custom" data-bs-toggle="modal" data-bs-target="#contactModal">Get Started Today</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="footer-brand">shriiitrackingsolution</div>
+          <p class="text-white-50">Making professional websites accessible to every business, regardless of budget.</p>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
+          <h5 class="mb-3">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#clients">Clients</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 mb-4 mb-lg-0">
+          <h5 class="mb-3">Services</h5>
+          <ul class="footer-links">
+            <li><a href="#">Website Development</a></li>
+            <li><a href="#">Mobile Optimization</a></li>
+            <li><a href="#">WhatsApp Integration</a></li>
+            <li><a href="#">Maintenance</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <h5 class="mb-3">Contact</h5>
+          <ul class="footer-links">
+            <li><a href="mailto:info@example.com">info@shriiitracking.com</a></li>
+            <li><a href="tel:+91">+91 XXXXX XXXXX</a></li>
+            <li><a href="#">Narnaund, Haryana</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 shriiitrackingsolution. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background: linear-gradient(135deg, #5610a5 0%, #7c3aed 100%); color: white;">
+        <h5 class="modal-title" id="contactModalLabel">Get Started Today</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form id="contactForm" class="needs-validation" novalidate>
           <div class="mb-3">
-            <label for="inquiryName" class="form-label small fw-medium">Name <span class="text-primary">*</span></label>
-            <input type="text" class="form-control" id="inquiryName" placeholder="Enter Name" required>
-            <div class="invalid-feedback">Please enter your name.</div>
+            <label for="businessName" class="form-label">Business Name *</label>
+            <input type="text" class="form-control" id="businessName" required>
+            <div class="invalid-feedback">Please enter your business name.</div>
           </div>
-
-          <!-- Contact Number Field -->
           <div class="mb-3">
-            <label for="inquiryContact" class="form-label small fw-medium">Contact Number <span class="text-primary">*</span></label>
-            <input type="tel" class="form-control" id="inquiryContact" placeholder="Enter Contact Number" pattern="[0-9]{10,15}" required>
-            <div class="invalid-feedback">Please enter a valid contact number.</div>
+            <label for="contactPerson" class="form-label">Contact Person *</label>
+            <input type="text" class="form-control" id="contactPerson" required>
+            <div class="invalid-feedback">Please enter contact person name.</div>
           </div>
-
-          <!-- Email ID Field -->
           <div class="mb-3">
-            <label for="inquiryEmail" class="form-label small fw-medium">Email ID <span class="text-primary">*</span></label>
-            <input type="email" class="form-control" id="inquiryEmail" placeholder="Enter Email ID" required>
-            <div class="invalid-feedback">Please enter a valid email address.</div>
+            <label for="phone" class="form-label">Phone Number *</label>
+            <input type="tel" class="form-control" id="phone" pattern="[0-9]{10}" required>
+            <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
           </div>
-
-          <!-- Where Meet Field -->
           <div class="mb-3">
-            <label for="inquiryMeet" class="form-label small fw-medium">Where Meet? <span class="text-primary">*</span></label>
-            <input type="text" class="form-control" id="inquiryMeet" placeholder="Enter Where We Meet?" required>
-            <div class="invalid-feedback">Please enter where we should meet.</div>
+            <label for="email" class="form-label">Email *</label>
+            <input type="email" class="form-control" id="email" required>
+            <div class="invalid-feedback">Please enter a valid email.</div>
           </div>
-
-          <!-- Interested In Field -->
           <div class="mb-3">
-            <label for="inquiryInterest" class="form-label small fw-medium">Interested In</label>
-            <input type="text" class="form-control" id="inquiryInterest" placeholder="Interested In">
+            <label for="businessType" class="form-label">Business Type</label>
+            <select class="form-select" id="businessType">
+              <option value="">Select business type</option>
+              <option value="Service Based">Service Based</option>
+              <option value="Product Based">Product Based</option>
+              <option value="E-commerce">E-commerce</option>
+              <option value="Other">Other</option>
+            </select>
           </div>
-
-          <!-- Message Field -->
           <div class="mb-3">
-            <label for="inquiryMessage" class="form-label small fw-medium">Message</label>
-            <textarea class="form-control" id="inquiryMessage" rows="3" placeholder="Enter your message"></textarea>
+            <label for="messageReq" class="form-label">Tell us about your requirements</label>
+            <textarea class="form-control" id="messageReq" rows="3"></textarea>
           </div>
-
-          <!-- Submit Button for Mobile (Standard WhatsApp Only) -->
-          <div class="d-block d-md-none">
-            <button type="button" class="btn btn-success w-100 py-2 fw-semibold" id="mobileWhatsAppBtn">
-              Submit
-            </button>
-          </div>
-
-          <!-- Submit Button for Desktop -->
-          <div class="d-none d-md-block">
-            <button type="button" class="btn btn-success w-100 py-2 fw-semibold" id="desktopWhatsAppBtn">
-              Submit Form
-            </button>
-          </div>
+          <button type="submit" class="btn btn-primary-custom w-100">
+            <i class="bi bi-whatsapp me-2"></i>Send via WhatsApp
+          </button>
         </form>
       </div>
     </div>
   </div>
 </div>
 
-
-<!-- Share Modal -->
-<div class="modal fade" id="shareModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header border-0">
-        <h1 class="modal-title fs-5 fw-semibold" id="shareModalLabel">Share:</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<!-- Toast Container -->
+<div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999;">
+  <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        <i class="bi bi-check-circle-fill me-2"></i>
+        <span id="toastMessage">Redirecting to WhatsApp...</span>
       </div>
-      <div class="modal-body px-4 py-4 text-center">
-        <!-- QR Code Container -->
-        <div class="qr-code-container mb-4">
-          <div id="qrCodeDisplay" class="mx-auto" style="width: 300px; height: 300px; background: white; padding: 20px; border-radius: 8px;">
-            <!-- QR Code will be generated here -->
-          </div>
-        </div>
-
-        <!-- Action Buttons -->
-        <div class="d-flex flex-column gap-3">
-          <!-- Copy Profile Link Button -->
-          <button type="button" class="btn w-100 btn-label" id="copyProfileLink">
-            <div class="iconGroup">
-              <span class="iconify" data-icon="material-symbols:content-copy" data-inline="false"></span>
-            </div>
-            Copy Profile Link
-          </button>
-
-          <!-- Download QR Code Button -->
-          <button type="button" class="btn w-100 btn-label" id="downloadQRCode">
-            <div class="iconGroup">
-              <span class="iconify" data-icon="material-symbols:download" data-inline="false"></span>
-            </div>
-            Download QR Code
-          </button>
-
-          <!-- Share Profile Link Button -->
-          <button type="button" class="btn w-100 btn-label" id="shareProfileLink">
-            <div class="iconGroup">
-              <span class="iconify" data-icon="material-symbols:share" data-inline="false"></span>
-            </div>
-            Share Profile Link
-          </button>
-        </div>
-      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
   </div>
-</div>
-
-<section class="contactInfo mt-3">
-  <div class="containerCustom">
-    <div class="card border card-border-success">
-      <div class="card-header primaryBG p-3">
-        <h6 class="card-title mb-0 text-light">Let's Connect</h6>
-      </div>
-      <div class="card-body">
-        <div class="mb-3">
-          <p class="text-muted text-uppercase fw-medium fs-12 mb-1">
-            <span class="iconify fs-6 me-1" data-icon="ri:phone-line" data-inline="false"></span> Contact Number:
-          </p>
-          <h6>
-            <a href="tel:09724568681" target="_blank" class="primaryGreenText">09724568681</a>  
-          </h6>
-        </div>
-        <div class="mb-3">
-          <p class="text-muted text-uppercase fw-medium fs-12 mb-1">
-            <span class="iconify fs-6 me-1" data-icon="formkit:email" data-inline="false"></span> Email ID:
-          </p>
-          <h6>
-            <a href="mailto:brajput58@gmail.com" target="_blank" class="primaryGreenText">brajput58@gmail.com</a>
-          </h6>
-          <h6>
-            <a href="mailto:" target="_blank" class="primaryGreenText"></a>
-          </h6>
-        </div>
-        <div>
-          <p class="text-muted text-uppercase fw-medium fs-12 mb-1">
-            <span class="iconify fs-6 me-1" data-icon="fluent:location-16-regular" data-inline="false"></span> Location:
-          </p>
-          <h6>
-            <a href="https://maps.app.goo.gl/JQgrXb3NyaYet7ev5" target="_blank" class="primaryGreenText"> Shiv Shakti Krupa Building, Near soni wadi, Behind Jubilee Baug, Vadodara, Gujarat 390001 </a>
-          </h6>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="SocialIcons mt-3">
-  <div class="containerCustom">
-    <div class="card border card-border-success">
-      <div class="card-header primaryBG p-3">
-        <h6 class="card-title mb-0 text-light">Social Media Links</h6>
-      </div>
-      <div class="card-body">
-        <div class="hstack gap-1 mb-1">
-          <a href="https://www.instagram.com/" target="_blank" class="btn w-100  btn-label">
-            <div class="iconGroup">
-              <span class="iconify" data-icon="streamline:instagram" data-inline="false"></span>
-            </div> Instagram
-          </a>
-          <a href="https://www.facebook.com/" target="_blank" class="btn w-100  btn-label">
-            <div class="iconGroup">
-              <span class="iconify" data-icon="ri:facebook-fill" data-inline="false"></span>
-            </div> Facebook
-          </a>
-          
-        </div>
-        <div class="hstack gap-1 mb-1">
-          <a href="https://www.youtube.com/" target="_blank" class="btn w-100  btn-label">
-            <div class="iconGroup">
-              <span class="iconify" data-icon="qlementine-icons:youtube-16" data-inline="false"></span>
-            </div> YouTube
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
-
-
-<footer class="footer text-center">
-<div class="containerCustom">
-  <p class="mb-0 fw-bold">© <script>document.write(new Date().getFullYear())</script> <a href="https://shriiitrackingsolution.in/" target="_blank">https://shriiitrackingsolution.in/</a> | All rights reserved.</p>
-</div>
-</footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-<script>
-(() => {
-  "use strict";
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll(".needs-validation");
-  // Loop over them and prevent submission
-  Array.from(forms).forEach((form) => {
-    form.addEventListener(
-      "submit",
-      (event) => {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add("was-validated");
-      },
-      false
-    );
-  });
-})();
-
-$(document).ready(function () {
-  const phoneNumber = "919724568681"; // Your WhatsApp number (with country code, no + or spaces)
-
-  // Construct WhatsApp Message for Connect/Inquiry Form
-  function constructInquiryMessage() {
-    const name = $("#inquiryName").val();
-    const contact = $("#inquiryContact").val();
-    const email = $("#inquiryEmail").val();
-    const whereMeet = $("#inquiryMeet").val();
-    const interest = $("#inquiryInterest").val();
-    const message = $("#inquiryMessage").val();
-
-    // Construct the WhatsApp inquiry message
-    return `Hello, I have an inquiry:\n\nName: ${name}\nContact Number: ${contact}\nEmail ID: ${email}\nWhere Meet: ${whereMeet}\nInterested In: ${interest || "Not specified"}\nMessage: ${message || "No additional message"}`;
-  }
-
-  // Form Validation Function
-  function validateInquiryForm() {
-    const form = document.querySelector("#connectInquiryForm");
-    if (!form.checkValidity()) {
-      form.classList.add("was-validated");
-      return false;
-    }
-    return true;
-  }
-
-  // Clear form fields after submission
-  function clearInquiryForm() {
-    const form = document.querySelector("#connectInquiryForm");
-    form.reset(); // Reset all form fields
-    form.classList.remove("was-validated"); // Remove validation classes
-  }
-
-  // Mobile WhatsApp Button (Universal Link - Works on all platforms)
-  $("#mobileWhatsAppBtn").on("click", function (event) {
-    event.preventDefault();
-    
-    if (!validateInquiryForm()) return;
-
-    const message = constructInquiryMessage();
-    const encodedMessage = encodeURIComponent(message);
-
-    // Use universal wa.me link - works on iOS, Android, and Desktop
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    
-    // Open WhatsApp - this works universally
-    window.location.href = whatsappUrl;
-
-    // Close modal and clear form after short delay
-    setTimeout(() => {
-      $('#connectFormModal').modal('hide');
-      clearInquiryForm();
-    }, 1000);
-  });
-
-  // Desktop WhatsApp Button
-  $("#desktopWhatsAppBtn").on("click", function (event) {
-    event.preventDefault();
-
-    if (!validateInquiryForm()) return;
-
-    const message = constructInquiryMessage();
-    const encodedMessage = encodeURIComponent(message);
-
-    // Use WhatsApp Web URL for desktop - opens in new tab
-    const whatsappWebUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
-    window.open(whatsappWebUrl, "_blank");
-
-    // Close modal and clear form after opening WhatsApp Web
-    setTimeout(() => {
-      $('#connectFormModal').modal('hide');
-      clearInquiryForm();
-    }, 500);
-  });
-});
-</script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-
-<script>
-$(document).ready(function () {
-  // Your profile URL - Update this with your actual profile URL
-  const profileUrl = window.location.href; // Or set a specific URL like "https://yourwebsite.com/profile"
   
-  let qrCodeGenerated = false;
-  let qrCode = null;
+  <div id="errorToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+        <span id="errorMessage">Please fill all required fields correctly.</span>
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
 
-  // Generate QR Code when modal is shown
-  $('#shareModal').on('shown.bs.modal', function () {
-    if (!qrCodeGenerated) {
-      // Clear any existing QR code
-      $('#qrCodeDisplay').empty();
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const phoneNumber = "919724568681"; // Your WhatsApp number (with country code, no + or spaces)
+
+    // Function to show toast messages
+    function showToast(type, message) {
+      const toastId = type === 'success' ? 'successToast' : 'errorToast';
+      const messageId = type === 'success' ? 'toastMessage' : 'errorMessage';
       
-      // Generate new QR code
-      qrCode = new QRCode(document.getElementById("qrCodeDisplay"), {
-        text: profileUrl,
-        width: 260,
-        height: 260,
-        colorDark: "#000000",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.H
-      });
+      // Update message
+      document.getElementById(messageId).textContent = message;
       
-      qrCodeGenerated = true;
-    }
-  });
-
-  // Reset QR code when modal is hidden
-  $('#shareModal').on('hidden.bs.modal', function () {
-    qrCodeGenerated = false;
-  });
-
-  // Copy Profile Link Button
-  $('#copyProfileLink').on('click', function () {
-    navigator.clipboard.writeText(profileUrl).then(function () {
-      showToast('Profile link copied to clipboard!');
-    }).catch(function (err) {
-      // Fallback for older browsers
-      const tempInput = document.createElement('input');
-      tempInput.value = profileUrl;
-      document.body.appendChild(tempInput);
-      tempInput.select();
-      document.execCommand('copy');
-      document.body.removeChild(tempInput);
-      showToast('Profile link copied to clipboard!');
-    });
-  });
-
-  // Download QR Code Button
-  $('#downloadQRCode').on('click', function () {
-    const canvas = document.querySelector('#qrCodeDisplay canvas');
-    if (canvas) {
-      // Convert canvas to blob
-      canvas.toBlob(function (blob) {
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.download = 'profile-qr-code.png';
-        link.href = url;
-        link.click();
-        URL.revokeObjectURL(url);
-        showToast('QR Code downloaded successfully!');
+      // Show toast
+      const toastElement = document.getElementById(toastId);
+      const toast = new bootstrap.Toast(toastElement, {
+        autohide: true,
+        delay: 3000
       });
-    } else {
-      showToast('QR Code not available. Please try again.');
+      toast.show();
     }
-  });
 
-  // Share Profile Link Button
-  $('#shareProfileLink').on('click', function () {
-    // Check if Web Share API is supported
-    if (navigator.share) {
-      navigator.share({
-        title: 'My Profile',
-        text: 'Check out my profile!',
-        url: profileUrl
-      })
-      .then(() => {
-        showToast('Profile shared successfully!');
-      })
-      .catch((err) => {
-        // If user cancels, just log it
-        if (err.name !== 'AbortError') {
-          console.error('Error sharing:', err);
-          fallbackShare();
+    // Handle form submission
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      // Check validation
+      if (!contactForm.checkValidity()) {
+        contactForm.classList.add('was-validated');
+        showToast('error', 'Please fill all required fields correctly.');
+        return;
+      }
+
+      contactForm.classList.add('was-validated');
+
+      // Get form values
+      const businessName = document.getElementById('businessName').value;
+      const contactPerson = document.getElementById('contactPerson').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+      const businessType = document.getElementById('businessType').value;
+      const messageReq = document.getElementById('messageReq').value;
+
+      // Preloaded greeting message
+      const greetingMessage = `Hi Shrii Tracking Solution Team! 👋\n\nI'm interested in your tracking solutions.\n\n`;
+
+      // Construct the complete WhatsApp message with greeting
+      const detailsMessage = `📋 *My Details:*\n\n🏢 Business Name: ${businessName}\n👤 Contact Person: ${contactPerson}\n📱 Phone: ${phone}\n📧 Email: ${email}\n🏭 Business Type: ${businessType || "Not specified"}\n\n💬 Requirements:\n${messageReq || "I'd like to know more about your services"}\n\nLooking forward to hearing from you!`;
+
+      const fullMessage = greetingMessage + detailsMessage;
+      const encodedMessage = encodeURIComponent(fullMessage);
+
+      // Show success toast
+      showToast('success', 'Redirecting to WhatsApp...');
+
+      // Detect if mobile or desktop
+      const isMobile = window.innerWidth <= 768;
+
+      // Delay redirect to allow toast to show
+      setTimeout(() => {
+        if (isMobile) {
+          // Mobile: Use wa.me link - works on iOS, Android
+          const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+          window.location.href = whatsappUrl;
+        } else {
+          // Desktop: Use WhatsApp Web - opens in new tab
+          const whatsappWebUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+          window.open(whatsappWebUrl, "_blank");
         }
-      });
-    } else {
-      // Fallback for browsers that don't support Web Share API
-      fallbackShare();
-    }
+
+        // Close modal and clear form
+        setTimeout(() => {
+          const modalElement = document.getElementById('contactModal');
+          const modal = bootstrap.Modal.getInstance(modalElement);
+          if (modal) {
+            modal.hide();
+          }
+          contactForm.reset();
+          contactForm.classList.remove('was-validated');
+        }, 500);
+      }, 800);
+    });
   });
 
-  // Fallback share function (copy to clipboard)
-  function fallbackShare() {
-    navigator.clipboard.writeText(profileUrl).then(function () {
-      showToast('Link copied! You can now share it anywhere.');
-    }).catch(function () {
-      showToast('Please copy the link manually from the address bar.');
+  // Smooth Scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href !== '#' && href !== '#contactModal') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
     });
-  }
+  });
 
-  // Toast notification function
-  function showToast(message) {
-    // Remove any existing toast
-    $('.toast-notification').remove();
-    
-    // Create and show new toast
-    const toast = $('<div class="toast-notification">' + message + '</div>');
-    $('body').append(toast);
-    
-    // Remove toast after 3 seconds
-    setTimeout(function () {
-      toast.fadeOut(300, function () {
-        $(this).remove();
-      });
-    }, 3000);
-  }
-});
+  // Animate on Scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-on-scroll');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.feature-card, .step-card, .pricing-card, .client-card').forEach(el => {
+    observer.observe(el);
+  });
 </script>
-
-
 
 
 </body>
