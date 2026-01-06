@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment | Durga Car Keys</title>
+ <!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="image/Fevicon.webp" />
+
+<link fetchpriority="high" rel="preload" href="image/BrandLogo.webp" as="image" type="image/webp" />
+<!-- Preload -->
+<link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+<link rel="preload" as="style" href="css/style.css" />
+
+<link rel="stylesheet" href="css/style.css" />
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+<body>
+
+<header>
+  <nav class="navbar bg-light fixed-top">
+  <div class="containerCustom">
+    <a class="navbar-brand" href="index.html"><img loading="eager" src="image/BrandLogo.webp" alt="Mahi Oraganics"></a>
+    <button class="navbar-toggler" type="button" aria-label="navbar toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy">
+          <a class="py-2 px-3 offViewLink rounded" href="index.html"><span class="iconify" data-icon="jam:home-f" data-inline="false"></span> Home</a>
+          <a class="py-2 px-3 offViewLink rounded" href="info.html"><span class="iconify" data-icon="icon-park-solid:info" data-inline="false"></span> Info</a>
+          <a class="py-2 px-3 offViewLink rounded active" href="paymentPage.html"><span class="iconify" data-icon="ic:outline-payment" data-inline="false"></span> Payment</a>
+          <a class="py-2 px-3 offViewLink rounded" href="services.html"><span class="iconify" data-icon="ic:baseline-miscellaneous-services" data-inline="false"></span> Services</a>
+          <a class="py-2 px-3 offViewLink rounded" href="products.html"><span class="iconify" data-icon="heroicons:shopping-bag-20-solid" data-inline="false"></span> Products</a>
+          <a class="py-2 px-3 offViewLink rounded" href="gallery.html"><span class="iconify" data-icon="solar:gallery-bold" data-inline="false"></span> Gallery</a>
+          <a class="py-2 px-3 offViewLink rounded" href="videos.html"><span class="iconify" data-icon="healthicons:video-24px" data-inline="false"></span> Videos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+
+<section class="mainTitle text-center">
+  <div class="containerCustom">
+     <h1 class="secH mb-0">Payment</h1>
+  </div>
+</section>
+
+<section class="paymentSec text-center defaultPadding pb-0">
+  <div class="containerCustom">
+<div class="payment-container">
+        <!-- Banking Details Section -->
+        <div class="banking-section">
+            <h2 class="section-title thirdH">Banking Details:</h2>
+            <div class="bank-details">
+                <div class="detail-row">
+                    <span class="detail-label">Bank Name:</span>
+                    <span class="detail-value">SBI</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">A/C No:</span>
+                    <span class="detail-value">1234567890</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">A/C Type:</span>
+                    <span class="detail-value">Current Account</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Branch:</span>
+                    <span class="detail-value">Alkapuri</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">IFSC Code:</span>
+                    <span class="detail-value">ALKO007</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">GST No:</span>
+                    <span class="detail-value">ABCDE1234F</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">SWIFT Code:</span>
+                    <span class="detail-value">ALKS99</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- QR Code Section -->
+        <div class="qr-section">
+            <h3 class="thirdH primaryGreenText">Scan QR Code to Pay:</h3>
+            <div class="qr-container">
+                <img src="image/qr-code.png" alt="Payment QR Code" class="qr-code" id="qrImage">
+            </div>
+        </div>
+
+        <div class="hstack gap-1 mb-4">
+          <a href="javascript:void(0)" id="copyBtn" type="button" class="btn w-100  btn-label">
+            <div class="iconGroup">
+              <span class="iconify" data-icon="icon-park-twotone:copy" data-inline="false"></span>
+            </div> <span id="copyText">abc@okicici</span>
+          </a>
+          <a href="javascript:void(0)" id="downloadBtn" type="button" class="btn w-100  btn-label">
+            <div class="iconGroup">
+              <span class="iconify" data-icon="fa6-solid:download" data-inline="false"></span>
+            </div> <span>QR Code</span>
+          </a>
+        </div>
+
+        <!-- Reminder Box -->
+        <div class="reminder-box">
+            After Payment, Don't forget to share screenshot !
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+</main>
+
+
+<footer class="footer text-center">
+<div class="containerCustom">
+  <p class="mb-0 fw-bold">© <script>document.write(new Date().getFullYear())</script> <a href="https://shriiitrackingsolution.in/" target="_blank">https://shriiitrackingsolution.in/</a> | All rights reserved.</p>
+</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+        // Copy UPI ID functionality
+        const copyBtn = document.getElementById('copyBtn');
+        const copyText = document.getElementById('copyText');
+        const upiId = 'abc@okicici';
+
+        copyBtn.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(upiId);
+                
+                // Visual feedback
+                copyBtn.classList.add('copied');
+                const originalText = copyText.textContent;
+                copyText.textContent = 'Copied!';
+                
+                setTimeout(() => {
+                    copyBtn.classList.remove('copied');
+                    copyText.textContent = originalText;
+                }, 2000);
+            } catch (err) {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = upiId;
+                textArea.style.position = 'fixed';
+                textArea.style.opacity = '0';
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                copyBtn.classList.add('copied');
+                copyText.textContent = 'Copied!';
+                setTimeout(() => {
+                    copyBtn.classList.remove('copied');
+                    copyText.textContent = upiId;
+                }, 2000);
+            }
+        });
+
+        // Download QR Code functionality
+        const downloadBtn = document.getElementById('downloadBtn');
+        const qrImage = document.getElementById('qrImage');
+
+        downloadBtn.addEventListener('click', () => {
+            // Create a temporary anchor element
+            const link = document.createElement('a');
+            link.href = qrImage.src;
+            link.download = 'payment-qr-code.png';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Visual feedback
+            const originalText = downloadBtn.querySelector('span:last-child').textContent;
+            downloadBtn.querySelector('span:last-child').textContent = 'Downloaded!';
+            setTimeout(() => {
+                downloadBtn.querySelector('span:last-child').textContent = originalText;
+            }, 2000);
+        });
+    </script>
+
+</body>
+</html>

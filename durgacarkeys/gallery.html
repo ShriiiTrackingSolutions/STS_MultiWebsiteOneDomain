@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Durga Car Keys</title>
+ <!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="image/Fevicon.webp" />
+
+
+<link fetchpriority="high" rel="preload" href="image/BrandLogo.webp" as="image" type="image/webp" />
+<!-- Preload -->
+<link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+<link rel="preload" as="style" href="css/style.css" />
+
+<link rel="stylesheet" href="css/style.css" />
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+<body>
+
+<header>
+  <nav class="navbar bg-light fixed-top">
+  <div class="containerCustom">
+    <a class="navbar-brand" href="index.html"><img loading="eager" src="image/BrandLogo.webp" alt="Mahi Oraganics"></a>
+    <button class="navbar-toggler" type="button" aria-label="navbar toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy">
+          <a class="py-2 px-3 offViewLink rounded" href="index.html"><span class="iconify" data-icon="jam:home-f" data-inline="false"></span> Home</a>
+          <a class="py-2 px-3 offViewLink rounded" href="info.html"><span class="iconify" data-icon="icon-park-solid:info" data-inline="false"></span> Info</a>
+          <a class="py-2 px-3 offViewLink rounded" href="paymentPage.html"><span class="iconify" data-icon="ic:outline-payment" data-inline="false"></span> Payment</a>
+          <a class="py-2 px-3 offViewLink rounded" href="services.html"><span class="iconify" data-icon="ic:baseline-miscellaneous-services" data-inline="false"></span> Services</a>
+          <a class="py-2 px-3 offViewLink rounded" href="products.html"><span class="iconify" data-icon="heroicons:shopping-bag-20-solid" data-inline="false"></span> Products</a>
+          <a class="py-2 px-3 offViewLink rounded active" href="gallery.html"><span class="iconify" data-icon="solar:gallery-bold" data-inline="false"></span> Gallery</a>
+          <a class="py-2 px-3 offViewLink rounded" href="videos.html"><span class="iconify" data-icon="healthicons:video-24px" data-inline="false"></span> Videos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main>
+
+<section class="mainTitle text-center">
+  <div class="containerCustom">
+     <h1 class="secH mb-0">Gallery</h1>
+  </div>
+</section>
+
+<section class="gallerySec text-center defaultPadding pb-0">
+  <div class="containerCustom">
+<div class="gallery-container">
+        <div class="gallery-grid">
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item" data-index="0">
+                <img src="image/img_6891ba846c8ac1.62083952.jpg" alt="Computer / Laptop Sales and Service" class="gallery-image">
+                <div class="gallery-overlay">
+                    <h2 class="fourthH gallery-title">Computer / Laptop Sales and Service</h2>
+                </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item" data-index="1">
+                <img src="image/img_6891ba92732237.83887701.jpg" alt="CCTV Camera Sales and Services" class="gallery-image">
+                <div class="gallery-overlay">
+                    <h2 class="fourthH gallery-title">CCTV Camera Sales and Services</h2>
+                </div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item" data-index="2">
+                <img src="image/img_6891baa0768ff6.55098491.jpg" alt="VDP, EM Lock" class="gallery-image">
+                <div class="gallery-overlay">
+                    <h2 class="fourthH gallery-title">VDP, EM Lock</h2>
+                </div>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item" data-index="3">
+                <img src="image/img_6891baac9968b5.88031240.jpg" alt="Refurbished Laptop/Desktop Sales" class="gallery-image">
+                <div class="gallery-overlay">
+                    <h2 class="fourthH gallery-title">Refurbished Laptop/Desktop Sales</h2>
+                </div>
+            </div>
+            <div class="gallery-item" data-index="4">
+                <img src="image/img_6891bab752dcf5.72695647.jpg" alt="Custom and Gaming PC Builds" class="gallery-image">
+                <div class="gallery-overlay">
+                    <h2 class="fourthH gallery-title">Custom and Gaming PC Builds</h2>
+                </div>
+            </div>
+            <div class="gallery-item" data-index="5">
+                <img src="image/img_6891bac91d1932.54907912.jpg" alt="Computer Laptop Accessories" class="gallery-image">
+                <div class="gallery-overlay">
+                    <h2 class="fourthH gallery-title">Computer Laptop Accessories</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
+            <div class="lightbox-counter" id="lightboxCounter"></div>
+            <img src="" alt="" class="lightbox-image" id="lightboxImage">
+            <div class="lightbox-title" id="lightboxTitle"></div>
+        </div>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&#8249;</button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext">&#8250;</button>
+    </div>
+
+</main>
+
+
+<footer class="footer text-center">
+<div class="containerCustom">
+  <p class="mb-0 fw-bold">© <script>document.write(new Date().getFullYear())</script> <a href="https://shriiitrackingsolution.in/" target="_blank">https://shriiitrackingsolution.in/</a> | All rights reserved.</p>
+</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+        // Gallery data
+        const galleryData = [
+            {
+                src: 'image/img_6891ba846c8ac1.62083952.jpg',
+                title: 'Computer / Laptop Sales and Service'
+            },
+            {
+                src: 'image/img_6891ba92732237.83887701.jpg',
+                title: 'CCTV Camera Sales and Services'
+            },
+            {
+                src: 'image/img_6891baa0768ff6.55098491.jpg',
+                title: 'VDP, EM Lock'
+            },
+            {
+                src: 'image/img_6891baac9968b5.88031240.jpg',
+                title: 'Refurbished Laptop/Desktop Sales'
+            },
+            {
+                src: 'image/img_6891bab752dcf5.72695647.jpg',
+                title: 'Custom and Gaming PC Builds'
+            },
+            {
+                src: 'image/img_6891bac91d1932.54907912.jpg',
+                title: 'Computer Laptop Accessories'
+            }
+        ];
+
+        let currentIndex = 0;
+
+        // Get elements
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxCounter = document.getElementById('lightboxCounter');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        // Open lightbox
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightbox();
+            lightbox.classList.add('active');
+            document.body.classList.add('lightbox-open');
+        }
+
+        // Close lightbox
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.classList.remove('lightbox-open');
+        }
+
+        // Update lightbox content
+        function updateLightbox() {
+            const item = galleryData[currentIndex];
+            lightboxImage.src = item.src;
+            lightboxImage.alt = item.title;
+            lightboxTitle.textContent = item.title;
+            lightboxCounter.textContent = `${currentIndex + 1} / ${galleryData.length}`;
+        }
+
+        // Navigate to previous image
+        function showPrevious() {
+            currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+            updateLightbox();
+        }
+
+        // Navigate to next image
+        function showNext() {
+            currentIndex = (currentIndex + 1) % galleryData.length;
+            updateLightbox();
+        }
+
+        // Event listeners for gallery items
+        galleryItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                const index = parseInt(item.getAttribute('data-index'));
+                openLightbox(index);
+            });
+        });
+
+        // Event listeners for lightbox controls
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', showPrevious);
+        lightboxNext.addEventListener('click', showNext);
+
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+
+            switch(e.key) {
+                case 'Escape':
+                    closeLightbox();
+                    break;
+                case 'ArrowLeft':
+                    showPrevious();
+                    break;
+                case 'ArrowRight':
+                    showNext();
+                    break;
+            }
+        });
+
+        // Touch swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        lightbox.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        lightbox.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                showNext();
+            }
+            if (touchEndX > touchStartX + 50) {
+                showPrevious();
+            }
+        }
+    </script>
+</body>
+</html>
