@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="images/cropped-favicon-192x192.png" />
   <meta name="description" content="Affordable website hosting solutions with subfolder architecture. Get your business online with minimal cost - no domain purchase needed!">
   <meta name="keywords" content="affordable website, low cost hosting, subfolder hosting, business website, online presence">
   <title>shriiitrackingsolution - Affordable Website Solutions</title>
@@ -41,19 +42,21 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
+
+    img{
+      width: 100%;
+    }
     
     /* Navbar */
     .navbar {
       background: white;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      padding: 1rem 0;
+      padding: 8px 0;
     }
     
     .navbar-brand {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--brand-primary) !important;
-      letter-spacing: -0.5px;
+      display: inline-block;
+      width: 120px;
     }
     
     .nav-link {
@@ -484,9 +487,8 @@
     }
     
     .footer-brand {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--brand-secondary);
+      width: 50%;
+      min-width: 120px;
       margin-bottom: 1rem;
     }
     
@@ -541,6 +543,25 @@
         margin-bottom: 2rem;
       }
     }
+
+  @media (max-width: 575.98px) {
+    .hero-section .btn{
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-stats{
+      text-align: center;
+      justify-content: center;
+    }
+    .footer{
+      text-align: center;
+    }
+    .footer-brand{
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
     
     /* Animations */
     @keyframes fadeInUp {
@@ -564,7 +585,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="#">shriiitrackingsolution</a>
+      <a class="navbar-brand" href="#"><img src="images/ShriiTrackingSolutionLogo.png" alt="Shriii Tracking Solution"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -926,7 +947,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <div class="footer-brand">shriiitrackingsolution</div>
+          <div class="footer-brand"><img src="images/ShriiTrackingSolutionLogoWhite.png" alt="Shriii Tracking Solution"></div>
           <p class="text-white-50">Making professional websites accessible to every business, regardless of budget.</p>
         </div>
         <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
@@ -950,9 +971,9 @@
         <div class="col-lg-3 col-md-4">
           <h5 class="mb-3">Contact</h5>
           <ul class="footer-links">
-            <li><a href="mailto:info@example.com">info@shriiitracking.com</a></li>
-            <li><a href="tel:+91">+91 XXXXX XXXXX</a></li>
-            <li><a href="#">Narnaund, Haryana</a></li>
+            <li><a href="mailto:contact@shriiitrackingsolutions.com">contact@shriiitrackingsolutions.com</a></li>
+            <li><a href="tel:+916354710794"> +91 63547 10794</a></li>
+            <li><a href="https://maps.app.goo.gl/EMtQmUV8unVQYXWE8">TF-A1-22, Akshar Pavilion Mall, Near Priya Cinema,Vasna Bhyali Main Road, Vadodara,391410</a></li>
           </ul>
         </div>
       </div>
@@ -1046,7 +1067,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const phoneNumber = "919724568681"; // Your WhatsApp number (with country code, no + or spaces)
+    const phoneNumber = "916354710794"; // Your WhatsApp number (with country code, no + or spaces)
 
     // Function to show toast messages
     function showToast(type, message) {
