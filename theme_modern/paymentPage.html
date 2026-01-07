@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment - Durga Car Keys</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="images/Fevicon.webp" />
+
+<!-- Primary Meta Tags -->
+<meta name="description" content="Make secure payments for our car key services via bank transfer or UPI.">
+<meta name="keywords" content="payment, bank details, UPI payment, car key payment">
+
+<!-- Preload -->
+<link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+<link rel="preload" as="style" href="css/style.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+<body>
+
+<header>
+  <nav class="navbar bg-light fixed-top">
+  <div class="containerCustom">
+    <a class="navbar-brand" href="index.html"><img loading="eager" src="images/BrandLogo.webp" alt="Durga Car Keys"></a>
+    <button class="navbar-toggler" type="button" aria-label="navbar toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+</header>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy">
+      <a class="py-2 px-3 offViewLink rounded" href="index.html"><span class="iconify" data-icon="jam:home-f" data-inline="false"></span> Home</a>
+      <a class="py-2 px-3 offViewLink rounded" href="info.html"><span class="iconify" data-icon="icon-park-solid:info" data-inline="false"></span> Info</a>
+      <a class="py-2 px-3 offViewLink rounded active" href="paymentPage.html"><span class="iconify" data-icon="ic:outline-payment" data-inline="false"></span> Payment</a>
+      <a class="py-2 px-3 offViewLink rounded" href="services.html"><span class="iconify" data-icon="ic:baseline-miscellaneous-services" data-inline="false"></span> Services</a>
+      <a class="py-2 px-3 offViewLink rounded" href="products.html"><span class="iconify" data-icon="heroicons:shopping-bag-20-solid" data-inline="false"></span> Products</a>
+      <a class="py-2 px-3 offViewLink rounded" href="gallery.html"><span class="iconify" data-icon="solar:gallery-bold" data-inline="false"></span> Gallery</a>
+      <a class="py-2 px-3 offViewLink rounded" href="videos.html"><span class="iconify" data-icon="healthicons:video-24px" data-inline="false"></span> Videos</a>
+    </div>
+  </div>
+</div>
+
+<main>
+<!-- Page Header -->
+<section class="banner">
+  <div class="containerCustom">
+    <div class="bannerImage">
+      <h1 class="secH mb-3">Payment Information</h1>
+      <p class="text-muted" style="max-width: 600px; margin: 0 auto; font-size: 1.125rem;">Secure and convenient payment options for your car key services</p>
+    </div>
+  </div>
+</section>
+
+<!-- Payment Content -->
+<section class="section-padding">
+  <div class="payment-container">
+    
+    <!-- QR Code Section -->
+    <div class="qr-code-section">
+      <h2 class="primaryGreenText mb-3">Scan to Pay</h2>
+      <p class="text-muted mb-4">Use any UPI app to scan and make instant payments</p>
+      <div class="qr-code-wrapper">
+        <img src="images/PaymentQR.webp" alt="Payment QR Code" loading="lazy">
+      </div>
+      <p class="text-muted mt-4"><small>Supported: Google Pay, PhonePe, Paytm, BHIM & more</small></p>
+    </div>
+
+    <!-- Bank Details -->
+    <div class="bank-details">
+      <h3 class="text-center mb-4 primaryGreenText">Bank Account Details</h3>
+      
+      <div class="bank-detail-item">
+        <span class="bank-detail-label">
+          <span class="iconify me-2" data-icon="mdi:account"></span>
+          Account Name
+        </span>
+        <span class="bank-detail-value">Bharat Rajout</span>
+      </div>
+
+      <div class="bank-detail-item">
+        <span class="bank-detail-label">
+          <span class="iconify me-2" data-icon="mdi:bank"></span>
+          Bank Name
+        </span>
+        <span class="bank-detail-value">State Bank of India</span>
+      </div>
+
+      <div class="bank-detail-item">
+        <span class="bank-detail-label">
+          <span class="iconify me-2" data-icon="mdi:credit-card"></span>
+          Account Number
+        </span>
+        <span class="bank-detail-value">1234567890</span>
+      </div>
+
+      <div class="bank-detail-item">
+        <span class="bank-detail-label">
+          <span class="iconify me-2" data-icon="mdi:shield-check"></span>
+          IFSC Code
+        </span>
+        <span class="bank-detail-value">SBIN0001234</span>
+      </div>
+
+      <div class="bank-detail-item">
+        <span class="bank-detail-label">
+          <span class="iconify me-2" data-icon="mdi:office-building"></span>
+          Branch
+        </span>
+        <span class="bank-detail-value">Vadodara Main Branch</span>
+      </div>
+
+      <div class="bank-detail-item">
+        <span class="bank-detail-label">
+          <span class="iconify me-2" data-icon="mdi:qrcode"></span>
+          UPI ID
+        </span>
+        <span class="bank-detail-value">bharatrajout@sbi</span>
+      </div>
+    </div>
+
+    <!-- Payment Instructions -->
+    <div class="info-section mt-4">
+      <h3>Payment Instructions</h3>
+      <ul style="color: var(--text-medium); line-height: 2;">
+        <li>Scan the QR code with any UPI app for instant payment</li>
+        <li>For bank transfers, use the account details provided above</li>
+        <li>Please share the transaction ID/screenshot after payment</li>
+        <li>Contact us on WhatsApp or call for payment confirmation</li>
+        <li>Payments are secure and processed instantly</li>
+      </ul>
+    </div>
+
+    <!-- Contact for Confirmation -->
+    <div class="linkBiscuits mt-4">
+      <div class="text-center mb-3">
+        <h3 class="primaryGreenText">After Payment</h3>
+        <p class="text-muted">Share your payment confirmation with us</p>
+      </div>
+      <div class="hstack gap-1">
+        <a href="tel:+919724568681" target="_blank" class="btn w-100 btn-label">
+          <div class="iconGroup">
+            <span class="iconify" data-icon="humbleicons:phone" data-inline="false"></span>
+          </div>
+          Call
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=919724568681" target="_blank" class="btn w-100 btn-label">
+          <div class="iconGroup">
+            <span class="iconify" data-icon="nimbus:whatsapp" data-inline="false"></span>
+          </div>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer text-center">
+<div class="containerCustom">
+  <p class="mb-0 fw-bold">© <script>document.write(new Date().getFullYear())</script> <a href="https://shriiitrackingsolution.in/" target="_blank">https://shriiitrackingsolution.in/</a> | All rights reserved.</p>
+</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
