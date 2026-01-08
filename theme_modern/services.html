@@ -52,7 +52,7 @@
 
 <main>
 <!-- Page Header -->
-<section class="banner">
+<section class="banner servicePage0">
   <div class="containerCustom">
     <div class="bannerImage">
       <h1 class="secH mb-3">Our Services</h1>
@@ -165,7 +165,7 @@
         </div>
         Call Now
       </a>
-      <a href="https://api.whatsapp.com/send?phone=919724568681" target="_blank" class="btn w-100 btn-label">
+      <a rel="noopener" data-mobile-target="" data-desktop-target="_blank" target="_blank" href="https://api.whatsapp.com/send?phone=919724568681"  class="btn w-100  btn-label set-url-target">
         <div class="iconGroup">
           <span class="iconify" data-icon="nimbus:whatsapp" data-inline="false"></span>
         </div>
@@ -185,6 +185,36 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+// WhatsApp URL Adjuster (Device-based Detection)
+(function () {
+
+  const mobileLink = "https://api.whatsapp.com/send?phone=916354710794";
+  const desktopLink = "https://web.whatsapp.com/send?phone=916354710794";
+
+  function isMobileDevice() {
+    return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
+
+  function updateWhatsAppLink() {
+    const isMobile = isMobileDevice();
+    const targetLink = isMobile ? mobileLink : desktopLink;
+
+    document.querySelectorAll(".set-url-target").forEach(el => {
+      el.setAttribute("href", targetLink);
+    });
+  }
+
+  updateWhatsAppLink(); // Call immediately on page load
+  window.addEventListener("resize", updateWhatsAppLink);
+  window.addEventListener("load", updateWhatsAppLink); 
+})();
+
+});
+</script>
 
 </body>
 </html>

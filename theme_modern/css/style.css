@@ -884,7 +884,6 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-lg);
-  margin-top: var(--spacing-lg);
 }
 
 .product-card {
@@ -902,9 +901,12 @@ header {
 
 .product-image {
   width: 100%;
-  height: 250px;
+  aspect-ratio: 1.22/1;
   object-fit: cover;
   transition: var(--transition-slow);
+}
+.hoverImgEffect {
+  overflow: hidden;
 }
 
 .product-card:hover .product-image {
@@ -934,7 +936,6 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-lg);
-  margin-top: var(--spacing-lg);
 }
 
 .video-card {
@@ -969,15 +970,16 @@ header {
 /* ============================================
    PAYMENT PAGE
    ============================================ */
-.payment-container {
-  max-width: 600px;
+
+.accountInfoDetails {
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .qr-code-section {
   background: var(--bg-white);
   border-radius: var(--radius-xl);
-  padding: var(--spacing-xxl);
+  padding: var(--spacing-lg);
   box-shadow: var(--shadow-card);
   text-align: center;
   margin-bottom: var(--spacing-lg);
@@ -986,7 +988,7 @@ header {
 .qr-code-wrapper {
   display: inline-block;
   padding: var(--spacing-lg);
-  background: white;
+  background: #e2f5fd;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-neumorphic-light);
   margin: var(--spacing-lg) 0;
@@ -1036,7 +1038,6 @@ header {
   border-radius: var(--radius-xl);
   padding: var(--spacing-xxl);
   box-shadow: var(--shadow-card);
-  margin-bottom: var(--spacing-lg);
 }
 
 .info-section h2 {
@@ -1062,7 +1063,7 @@ header {
 }
 
 .social-card {
-  flex:1;
+  flex: 1;
   min-width: 120px;
   display: flex;
   flex-direction: column;
@@ -1123,6 +1124,14 @@ header {
     --font-size-4xl: 2rem;
     --font-size-3xl: 1.75rem;
     --font-size-2xl: 1.5rem;
+
+    --spacing-xl: 24px;
+    --spacing-xxl: 30px;
+
+    /* Border Radius */
+    --spacing-lg: 16px;
+    --radius-lg: 1rem;
+    --radius-xl: 1.25rem;
   }
 
   .containerCustom {
@@ -1151,13 +1160,30 @@ header {
     margin-top: 0px;
   }
 
-.card {
-  padding: 12px;
-  padding-top: 2rem;
-}
-.card-header {
-  margin-left: -16px;
-}
+  .card {
+    padding: 12px;
+    padding-top: 2rem;
+  }
+  .card-header {
+    margin-left: -16px;
+    margin-top: -32px;
+  }
+
+  .info-section {
+    padding: var(--spacing-sm);
+  }
+
+  .btn {
+    padding: 0.875rem 1.75rem;
+    font-size: var(--font-size-xs);
+  }
+  .btn-label .iconGroup {
+    font-size: 15px;
+  }
+
+  .bank-detail-item {
+    padding: var(--spacing-sm) 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1197,6 +1223,31 @@ header {
   margin: 0 auto;
 }
 
+.banner.aboutPage0 {
+  background: linear-gradient(135deg, #dce6ffd3 0%, #dce6ffd3),
+    url("../images/AboutPageBanner.webp") center/cover no-repeat;
+}
+.banner.PaymentPage0 {
+  background: linear-gradient(135deg, #dce6ffd3 0%, #dce6ffd3),
+    url("../images/PaymentPageBanner.webp") center/cover no-repeat;
+}
+.banner.servicePage0 {
+  background: linear-gradient(135deg, #dce6ffd3 0%, #dce6ffd3),
+    url("../images/servicesPageBanner.webp") center/cover no-repeat;
+}
+.banner.productsPage0 {
+  background: linear-gradient(135deg, #dce6ffd3 0%, #dce6ffd3),
+    url("../images/ProductPageBanner.webp") center/cover no-repeat;
+}
+.banner.galleryPage0 {
+  background: linear-gradient(135deg, #dce6ffd3 0%, #dce6ffd3),
+    url("../images/galleryPageBanner.webp") center/cover no-repeat;
+}
+.banner.videoPage0 {
+  background: linear-gradient(135deg, #dce6ffd3 0%, #dce6ffd3),
+    url("../images/videoPageBanner.webp") center/cover no-repeat;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -1218,5 +1269,255 @@ header {
   }
   50% {
     opacity: 0.5;
+  }
+}
+
+/* ============================================
+   LIGHTBOX GALLERY
+   ============================================ */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.lightbox.active {
+  display: flex;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  margin-top: 60px;
+}
+
+.lightbox.active .lightbox-content {
+  transform: scale(1);
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  display: block;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-base);
+  z-index: 2;
+}
+
+.lightbox-close:hover {
+  background: var(--secondary-color);
+  transform: rotate(90deg);
+}
+
+.lightbox-counter {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  color: white;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(5px);
+}
+
+.lightbox-title {
+  color: white;
+  text-align: center;
+  margin-top: var(--spacing-md);
+  font-weight: 500;
+  font-size: var(--font-size-lg);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 3rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+.lightbox-nav:hover {
+  background: var(--primary-color);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-prev {
+  left: 2rem;
+}
+
+.lightbox-next {
+  right: 2rem;
+}
+
+.lightbox-nav span {
+  display: inline-block;
+  margin-top: -8px;
+}
+
+/* Video Play Button Overlay */
+.video-card {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+  border: 2px solid white;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.video-play-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid white;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.video-card:hover .video-play-btn {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.video-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  opacity: 1;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.video-overlay h3,.video-overlay p{
+  color: white;
+}
+
+.video-heading {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.video-text {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.video-thumbnail{
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+.video-label {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 2;
+  backdrop-filter: blur(4px);
+}
+
+.lightbox-next {
+  right: 2rem;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .lightbox-nav {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .lightbox-prev {
+    left: 1rem;
+  }
+
+  .lightbox-next {
+    right: 1rem;
+  }
+
+  .lightbox-close {
+    top: -45px;
+    right: 0px;
+  }
+
+  .lightbox-counter {
+    top: -45px;
   }
 }
