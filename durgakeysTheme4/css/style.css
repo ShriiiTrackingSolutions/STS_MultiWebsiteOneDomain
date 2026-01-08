@@ -1,0 +1,620 @@
+/* ============================================
+   DURGAKEYS THEME 4 - CYBERPUNK HIGH-TECH SYSTEM
+   ============================================ */
+
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Rajdhani:wght@500;600;700&display=swap");
+
+/* ============================================
+   CSS VARIABLES - DESIGN TOKENS
+   ============================================ */
+:root {
+  /* Color Palette - Cyberpunk / Dark Mode */
+  --bg-dark: #0f172a; /* Deep Navy */
+  --bg-card: #1e293b; /* Lighter Navy */
+  --bg-card-hover: #334155;
+
+  --primary-color: #f43f5e; /* Neon Rose */
+  --secondary-color: #0ea5e9; /* Neon Sky */
+  --accent-color: #d946ef; /* Neon Fuchsia */
+
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+
+  --border-color: #334155;
+  --border-glow: #f43f5e;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 5rem;
+
+  /* Border Radius - Angular/Tech feel */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 15px rgba(244, 63, 94, 0.4);
+
+  /* Typography */
+  --font-heading: "Rajdhani", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --h1-size: 3.5rem;
+  --h2-size: 2.5rem;
+  --h3-size: 1.75rem;
+  --body-size: 1rem;
+}
+
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--body-size);
+  font-family: var(--font-body);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-sm);
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-color);
+  text-shadow: 0 0 8px rgba(244, 63, 94, 0.6);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+.containerCustom {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+.section-padding {
+  padding: var(--spacing-lg) 0;
+}
+
+/* ============================================
+   HEADER & NAVBAR
+   ============================================ */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar {
+  padding: 12px 0;
+}
+
+.navbar .containerCustom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 50px;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+}
+
+.navbar-toggler {
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+/* Offcanvas */
+.offcanvas {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+}
+.offcanvas-header {
+  border-bottom: 1px solid var(--border-color);
+}
+.btn-close {
+  filter: invert(1);
+}
+
+.offViewLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  color: var(--text-muted);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+}
+
+.offViewLink:hover,
+.offViewLink.active {
+  background: rgba(244, 63, 94, 0.1);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ============================================
+   HERO / BANNER
+   ============================================ */
+.banner {
+  position: relative;
+  padding-top: 140px; /* Header height + spacing */
+  padding-bottom: var(--spacing-lg);
+  background: radial-gradient(
+      circle at top right,
+      rgba(14, 165, 233, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(244, 63, 94, 0.15),
+      transparent 40%
+    );
+  border-bottom: 1px solid var(--border-color);
+}
+
+.banner h1 {
+  font-size: var(--h1-size);
+  background: linear-gradient(to right, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: var(--spacing-sm);
+}
+
+.banner p {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin-bottom: var(--spacing-md);
+}
+
+/* QR Box & Download Button */
+.qrBox {
+  position: relative;
+  overflow: hidden;
+}
+.qrBox:hover .qr-download-btn {
+  right: 10px;
+}
+
+.qr-download-btn {
+  position: absolute;
+  bottom: 10px;
+  right: -50px;
+  width: 35px;
+  height: 35px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.qr-download-btn:hover {
+  transform: scale(1.1);
+  background: #e11d48;
+}
+
+/* ============================================
+   TOAST NOTIFICATIONS
+   ============================================ */
+.toast-notification {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--border-glow);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-glow);
+  z-index: 9999;
+  animation: slideIn 0.3s ease;
+  font-weight: 500;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   COMPONENTS: CARDS
+   ============================================ */
+.card,
+.service-card,
+.product-card,
+.video-card,
+.gallery-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  height: 100%;
+}
+
+.card:hover,
+.service-card:hover,
+.product-card:hover,
+.video-card:hover,
+.gallery-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Service Card Specifics */
+.service-icon {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-sm);
+}
+.service-content {
+  padding: var(--spacing-sm);
+}
+.service-card h3 {
+  font-size: 1.5rem;
+  color: var(--text-main);
+}
+.service-description {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Product Card Specifics */
+.product-image {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color);
+}
+.product-content {
+  padding: var(--spacing-sm);
+  text-align: center;
+}
+.product-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Video Card Specifics */
+.video-card {
+  display: block; /* Make anchor tag behave like block */
+}
+.video-thumbnail {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.video-card:hover .video-thumbnail {
+  opacity: 1;
+}
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.video-play-btn::after {
+  content: "";
+  border-style: solid;
+  border-width: 10px 0 10px 16px;
+  border-color: transparent transparent transparent var(--primary-color);
+  margin-left: 4px;
+}
+.video-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, var(--bg-dark), transparent);
+  padding: 1rem;
+  z-index: 2;
+}
+.video-heading {
+  font-size: 1.1rem;
+  margin: 0;
+}
+.video-text {
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+}
+
+/* Gallery Item Specifics */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-sm);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1;
+  transition: transform 0.5s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* ============================================
+   COMPONENTS: BUTTONS
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 15px rgba(244, 63, 94, 0.3);
+}
+
+.btn-primary:hover {
+  background: #e11d48; /* Darker pink */
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(244, 63, 94, 0.6);
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.btn-outline:hover {
+  background: rgba(14, 165, 233, 0.1);
+  color: #38bdf8;
+  border-color: #38bdf8;
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.4);
+}
+
+/* ============================================
+   GRIDS
+   ============================================ */
+.products-grid,
+.services-grid,
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  background: var(--bg-card);
+  padding: var(--spacing-md) 0;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+.text-center {
+  text-align: center;
+}
+.mb-3 {
+  margin-bottom: 1rem;
+}
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+.text-muted {
+  color: var(--text-muted) !important;
+}
+.w-100 {
+  width: 100%;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+  :root {
+    --h1-size: 30px;
+    --h2-size: 24px;
+    --h3-size: 22px;
+    --spacing-lg: 2rem;
+    --spacing-md: 18px;
+    --spacing-sm: 12px;
+    --body-size: 13px;
+  }
+
+  .banner {
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  .banner p {
+    margin: 0 auto var(--spacing-md);
+  }
+
+  .products-grid,
+  .services-grid,
+  .videos-grid {
+    grid-template-columns: 1fr; /* Full width on mobile */
+    gap: var(--spacing-sm);
+  }
+
+  .navbar-brand img {
+    height: 40px;
+  }
+}
+
+/* ============================================
+   LIGHTBOX CSS (Custom)
+   ============================================ */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10001;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 85vh;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--radius-md);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: var(--text-main);
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.lightbox-nav:hover {
+  background: var(--primary-color);
+  color: white;
+}
+.lightbox-prev {
+  left: 20px;
+}
+.lightbox-next {
+  right: 20px;
+}
+
+/* ============================================
+   WHATSAPP ADJUSTER
+   ============================================ */
+/* Utility for JS targetting */
+.set-url-target {
+  /* Style handled by buttons */
+}

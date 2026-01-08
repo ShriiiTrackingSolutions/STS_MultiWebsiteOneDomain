@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products - Durga Car Keys (Sport)</title>
+<link rel="icon" type="image/x-icon" href="images/Fevicon.webp" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-dark fixed-top">
+  <div class="containerCustom">
+    <a class="navbar-brand" href="index.html"><img loading="eager" src="images/BrandLogo.webp" alt="Durga Car Keys"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+</header>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title text-primary">MENU</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="d-flex flex-column gap-2">
+      <a class="offViewLink" href="index.html"><span class="iconify" data-icon="jam:home-f"></span> Home</a>
+      <a class="offViewLink" href="info.html"><span class="iconify" data-icon="icon-park-solid:info"></span> Info</a>
+      <a class="offViewLink" href="paymentPage.html"><span class="iconify" data-icon="ic:outline-payment"></span> Payment</a>
+      <a class="offViewLink" href="services.html"><span class="iconify" data-icon="ic:baseline-miscellaneous-services"></span> Services</a>
+      <a class="offViewLink active" href="products.html"><span class="iconify" data-icon="heroicons:shopping-bag-20-solid"></span> Products</a>
+      <a class="offViewLink" href="gallery.html"><span class="iconify" data-icon="solar:gallery-bold"></span> Gallery</a>
+      <a class="offViewLink" href="videos.html"><span class="iconify" data-icon="healthicons:video-24px"></span> Videos</a>
+    </div>
+  </div>
+</div>
+<main>
+<section class="banner text-center d-flex align-items-center justify-content-center" style="min-height: 50vh;">
+  <div class="containerCustom">
+      <h1 class="display-4 fw-bold">Our Products</h1>
+      <p class="h5 text-muted">Performance Parts & Accessories</p>
+  </div>
+</section>
+<section class="section-padding">
+  <div class="containerCustom">
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="images/TransponderKeys.webp" alt="Transponder Keys" class="product-image">
+        <div class="product-content">
+          <h3 class="product-title">Transponder Keys</h3>
+          <p class="text-muted small">OEM quality transponder keys.</p>
+          <button class="btn btn-primary w-100 whatsapp-inquiry-btn" data-product="Transponder Keys">Inquire</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/RemoteKeys.webp" alt="Remote Keys" class="product-image">
+        <div class="product-content">
+          <h3 class="product-title">Remote Keys</h3>
+          <p class="text-muted small">Durability tested remote keys.</p>
+          <button class="btn btn-primary w-100 whatsapp-inquiry-btn" data-product="Remote Keys">Inquire</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/SmartKeys.webp" alt="Smart Keys" class="product-image">
+        <div class="product-content">
+          <h3 class="product-title">Smart Keys</h3>
+          <p class="text-muted small">Modern proximity smart keys.</p>
+          <button class="btn btn-primary w-100 whatsapp-inquiry-btn" data-product="Smart Keys">Inquire</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/KeyShells.webp" alt="Key Shells" class="product-image">
+        <div class="product-content">
+          <h3 class="product-title">Key Shells</h3>
+          <p class="text-muted small">Replacement housings.</p>
+          <button class="btn btn-primary w-100 whatsapp-inquiry-btn" data-product="Key Shells">Inquire</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/FlipKeys.webp" alt="Flip Keys" class="product-image">
+        <div class="product-content">
+          <h3 class="product-title">Flip Keys</h3>
+          <p class="text-muted small">Stylish flip conversion kits.</p>
+          <button class="btn btn-primary w-100 whatsapp-inquiry-btn" data-product="Flip Keys">Inquire</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/BikeKeys.webp" alt="Bike Keys" class="product-image">
+        <div class="product-content">
+          <h3 class="product-title">Bike Keys</h3>
+          <p class="text-muted small">All motorcycle brands supported.</p>
+          <button class="btn btn-primary w-100 whatsapp-inquiry-btn" data-product="Bike Keys">Inquire</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="text-center">
+<div class="containerCustom">
+  <p class="mb-0 small text-muted">© <script>document.write(new Date().getFullYear())</script> Shriii Tracking Solution | All rights reserved.</p>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const phoneNumber = "919724568681";
+    function isMobileDevice() { return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent); }
+    document.querySelectorAll('.whatsapp-inquiry-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+             const productName = btn.getAttribute('data-product');
+             const message = encodeURIComponent(`Interested in: ${productName}`);
+             const url = isMobileDevice() 
+                 ? `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`
+                 : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+             window.open(url, '_blank');
+        });
+    });
+});
+</script>
+</body>
+</html>
