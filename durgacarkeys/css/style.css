@@ -182,10 +182,16 @@ header{
   background-color: var(--primaryGreen);
 }
 
-.btn-label:hover{
+.btn-label:hover,.btn-label:active{
   background-color: var(--darkHover);
   color: #ffffff
 } 
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+    background-color: var(--darkHover);
+    color: #ffffff;
+    border-color: var(--primaryGreen);
+}
 
 .modal-header{
   background-color: var(--lightBG);

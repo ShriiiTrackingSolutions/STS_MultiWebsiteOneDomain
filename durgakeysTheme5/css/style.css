@@ -254,7 +254,13 @@ img {
   transition: all 0.3s;
 }
 
-.btn-primary {
+.btn-check:checked+.btn.btn-primary, .btn.btn-primary.active, .btn.btn-primary.show, .btn.btn-primary:first-child:active, :not(.btn-check)+.btn.btn-primary:active {
+    color: white;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary {  
   background-color: var(--primary-color);
   color: white;
   box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
