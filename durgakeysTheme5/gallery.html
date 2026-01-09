@@ -38,7 +38,7 @@
   </div>
 </div>
 <main>
-<section class="banner text-center d-flex align-items-center justify-content-center" style="min-height: 50vh;">
+<section class="banner text-center d-flex align-items-center justify-content-center galleryPage0" style="min-height: 50vh;">
   <div class="containerCustom">
       <h1 class="display-4 fw-bold">Project Gallery</h1>
       <p class="h5 text-muted">A Showcase of Excellence</p>
@@ -47,15 +47,12 @@
 <section class="section-padding">
   <div class="containerCustom">
     <div class="gallery-grid">
-      <div class="gallery-item"><img src="images/1.webp" alt="Gallery 1"></div>
-      <div class="gallery-item"><img src="images/2.webp" alt="Gallery 2"></div>
-      <div class="gallery-item"><img src="images/3.webp" alt="Gallery 3"></div>
-      <div class="gallery-item"><img src="images/4.webp" alt="Gallery 4"></div>
-      <div class="gallery-item"><img src="images/5.webp" alt="Gallery 5"></div>
-      <div class="gallery-item"><img src="images/6.webp" alt="Gallery 6"></div>
-      <div class="gallery-item"><img src="images/7.webp" alt="Gallery 7"></div>
-      <div class="gallery-item"><img src="images/8.webp" alt="Gallery 8"></div>
-      <div class="gallery-item"><img src="images/9.webp" alt="Gallery 9"></div>
+      <div class="gallery-item"><img src="images/img_6891ba846c8ac1.62083952.jpg" alt="Gallery 1"></div>
+      <div class="gallery-item"><img src="images/img_6891ba92732237.83887701.jpg" alt="Gallery 2"></div>
+      <div class="gallery-item"><img src="images/img_6891baa0768ff6.55098491.jpg" alt="Gallery 3"></div>
+      <div class="gallery-item"><img src="images/img_6891baac9968b5.88031240.jpg" alt="Gallery 4"></div>
+      <div class="gallery-item"><img src="images/img_6891bab752dcf5.72695647.jpg" alt="Gallery 5"></div>
+      <div class="gallery-item"><img src="images/img_6891bac91d1932.54907912.jpg" alt="Gallery 6"></div>
     </div>
   </div>
 </section>
@@ -63,6 +60,8 @@
 <div class="lightbox" id="lightbox">
     <div class="lightbox-content">
         <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&#10094;</button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext">&#10095;</button>
         <img src="" class="lightbox-image" id="lightboxImage">
     </div>
 </div>
@@ -78,10 +77,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightbox = document.getElementById('lightbox');
     const img = document.getElementById('lightboxImage');
     const close = document.getElementById('lightboxClose');
+    const prevBtn = document.getElementById('lightboxPrev');
+    const nextBtn = document.getElementById('lightboxNext');
     
-    items.forEach(item => {
+    let currentIndex = 0;
+
+    const showImage = (index) => {
+        if (index >= items.length) currentIndex = 0;
+        else if (index < 0) currentIndex = items.length - 1;
+        else currentIndex = index;
+        
+        img.src = items[currentIndex].src;
+    };
+
+    items.forEach((item, index) => {
         item.addEventListener('click', () => {
-            img.src = item.src;
+            currentIndex = index;
+            showImage(currentIndex);
             lightbox.classList.add('active');
         });
     });
@@ -89,6 +101,25 @@ document.addEventListener('DOMContentLoaded', () => {
     close.addEventListener('click', () => lightbox.classList.remove('active'));
     lightbox.addEventListener('click', (e) => {
         if(e.target === lightbox) lightbox.classList.remove('active');
+    });
+
+    // Navigation
+    prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showImage(currentIndex - 1);
+    });
+
+    nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showImage(currentIndex + 1);
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') lightbox.classList.remove('active');
+        if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+        if (e.key === 'ArrowRight') showImage(currentIndex + 1);
     });
 });
 </script>

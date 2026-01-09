@@ -38,7 +38,7 @@
   </div>
 </div>
 <main>
-<section class="banner text-center d-flex align-items-center justify-content-center" style="min-height: 50vh;">
+<section class="banner text-center d-flex align-items-center justify-content-center servicePage0"  style="min-height: 50vh;">
   <div class="containerCustom">
       <h1 class="display-4 fw-bold">Our Services</h1>
       <p class="h5 text-muted">Precision Automotive Solutions</p>
@@ -51,37 +51,37 @@
         <span class="iconify service-icon" data-icon="mdi:car-key"></span>
         <h3>Key Duplication</h3>
         <p class="text-muted">High-precision duplication for all car brands.</p>
-        <a href="https://api.whatsapp.com/send?phone=919724568681" target="_blank" class="btn btn-primary mt-3">Book Now</a>
+        <button class="btn btn-primary mt-3 whatsapp-inquiry-btn" data-service="Key Duplication">Book Now</button>
       </div>
       <div class="service-card">
         <span class="iconify service-icon" data-icon="mdi:remote"></span>
         <h3>Remote Programming</h3>
         <p class="text-muted">Expert coding for key fobs and remotes.</p>
-        <a href="https://api.whatsapp.com/send?phone=919724568681" target="_blank" class="btn btn-primary mt-3">Book Now</a>
+        <button class="btn btn-primary mt-3 whatsapp-inquiry-btn" data-service="Remote Programming">Book Now</button>
       </div>
       <div class="service-card">
         <span class="iconify service-icon" data-icon="mdi:lock-open"></span>
         <h3>Emergency Unlocking</h3>
         <p class="text-muted">24/7 fast response for car lockouts.</p>
-        <a href="https://api.whatsapp.com/send?phone=919724568681" target="_blank" class="btn btn-primary mt-3">Book Now</a>
+        <button class="btn btn-primary mt-3 whatsapp-inquiry-btn" data-service="Emergency Unlocking">Book Now</button>
       </div>
       <div class="service-card">
         <span class="iconify service-icon" data-icon="mdi:motorbike"></span>
         <h3>Bike Keys</h3>
         <p class="text-muted">Keys and locksets for all bike models.</p>
-        <a href="https://api.whatsapp.com/send?phone=919724568681" target="_blank" class="btn btn-primary mt-3">Book Now</a>
+        <button class="btn btn-primary mt-3 whatsapp-inquiry-btn" data-service="Bike Keys">Book Now</button>
       </div>
       <div class="service-card">
         <span class="iconify service-icon" data-icon="mdi:chip"></span>
         <h3>Transponder</h3>
         <p class="text-muted">Advanced transponder chip cloning.</p>
-        <a href="https://api.whatsapp.com/send?phone=919724568681" target="_blank" class="btn btn-primary mt-3">Book Now</a>
+        <button class="btn btn-primary mt-3 whatsapp-inquiry-btn" data-service="Transponder">Book Now</button>
       </div>
       <div class="service-card">
         <span class="iconify service-icon" data-icon="mdi:wrench"></span>
         <h3>Ignition Repair</h3>
         <p class="text-muted">Fixing stuck or broken ignition switches.</p>
-        <a href="https://api.whatsapp.com/send?phone=919724568681" target="_blank" class="btn btn-primary mt-3">Book Now</a>
+        <button class="btn btn-primary mt-3 whatsapp-inquiry-btn" data-service="Ignition Repair">Book Now</button>
       </div>
     </div>
   </div>
@@ -93,5 +93,23 @@
 </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const phoneNumber = "919724568681";
+    function isMobileDevice() { return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent); }
+    
+    document.querySelectorAll('.whatsapp-inquiry-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+             const serviceName = btn.getAttribute('data-service');
+             const message = encodeURIComponent(`I need: ${serviceName}`);
+             
+             // Smart Device Detection
+             const url = isMobileDevice() 
+                 ? `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`
+                 : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+                 
+             window.open(url, '_blank');
+        });
+    });
+});
+</script>

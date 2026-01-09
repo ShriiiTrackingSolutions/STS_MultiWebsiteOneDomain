@@ -762,6 +762,103 @@ font-size: 16px;
             transform: translateY(0);
         }
 
+/* ================================
+   DARK RED THEME – GLightbox + Plyr
+   ================================ */
+
+/* Main Plyr Accent Color */
+:root {
+  --plyr-color-main: var(--primaryGreen); /* Dark Red */
+}
+
+:root{
+--primaryGreen: #13C56B;
+--lightBG:#51d69457;
+--darkHover: #10a75b;
+--accentBlue: #6691E7;
+--black:#212529;
+}
+
+/* ----------------------------
+   Center Play Button (Big)
+   ---------------------------- */
+.plyr__control--overlaid {
+  background: radial-gradient(circle, #13c56cbe  0%rgba(14, 143, 79, 0.719)4e 70%) !important;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.plyr__control--overlaid svg {
+  fill: #ffffff !important;
+}
+
+/* Hover Effect */
+.plyr__control--overlaid:hover {
+  background: radial-gradient(circle, #13C56B 0%, #0e8f4e 70%) !important;
+}
+
+/* ----------------------------
+   Control Bar Background
+   ---------------------------- */
+.plyr--video .plyr__controls {
+  background: linear-gradient(
+    to top,
+    rgba(0, 10, 0, 0.9),
+    rgba(1, 10, 0, 0.4)
+  );
+}
+
+/* ----------------------------
+   Control Icons
+   ---------------------------- */
+.plyr__control svg {
+  fill: #f5f5f5;
+}
+
+.plyr__control:hover svg {
+  fill: var(--black);
+}
+
+/* ----------------------------
+   Progress Bar / Timeline
+   ---------------------------- */
+.plyr--full-ui input[type=range] {
+  color: var(--primaryGreen);
+}
+
+.plyr__progress__buffer {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ----------------------------
+   Volume Slider
+   ---------------------------- */
+.plyr__volume input[type=range] {
+  color: var(--primaryGreen);
+}
+
+/* ----------------------------
+   Time Text
+   ---------------------------- */
+.plyr__time {
+  color: #e5e5e5;
+}
+
+/* ----------------------------
+   Settings & Menu
+   ---------------------------- */
+.plyr__menu__container {
+  background: #011400;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.plyr__menu__container button {
+  color: #ffffff;
+}
+
+.plyr__menu__container button:hover {
+  background: rgba(28, 139, 0, 0.4);
+}
+
 
         .banking-section {
             margin-bottom: 35px;
